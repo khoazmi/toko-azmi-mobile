@@ -21,7 +21,7 @@ class MyHomePage extends StatelessWidget {
       drawer: const LeftDrawer(),
       appBar: AppBar(
         title: const Text(
-          'Mental Health Tracker',
+          'Toko Azmi',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -49,7 +49,7 @@ class MyHomePage extends StatelessWidget {
                   const Padding(
                     padding: EdgeInsets.only(top: 16.0),
                     child: Text(
-                      'Welcome to Mental Health Tracker',
+                      'welcome to Toko Azmi',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18.0,

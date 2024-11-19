@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toko_azmi/screens/menu.dart';
+// TODO: Impor halaman MoodEntryFormPage jika sudah dibuat (DONE)
 import 'package:toko_azmi/screens/productentry_form.dart';
-
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -28,7 +28,7 @@ class LeftDrawer extends StatelessWidget {
                 ),
                 Padding(padding: EdgeInsets.all(8)),
                 Text(
-                  "Ayo Tambahkan Produk Mu!",
+                  "Ayo Isi Podukmu!",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 15,
@@ -55,11 +55,11 @@ class LeftDrawer extends StatelessWidget {
             leading: const Icon(Icons.production_quantity_limits),
             title: const Text('Tambah Produk'),
             onTap: () {
-              // Routing ke halaman ProdcutEntryFormPage (DONE)
-              Navigator.push(
+              // Routing ke halaman MoodEntryFormPage (DONE)
+              Navigator.push( // push digunakan untuk routing ke halaman baru dengan halaman awal
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ProductEntryFormPage(),
+                  builder: (context) => const ProductEntryFormPage(),
                 ),
               );
             },
