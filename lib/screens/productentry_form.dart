@@ -17,7 +17,7 @@ class _ProductEntryFormPageState extends State<ProductEntryFormPage> {
   final _formKey = GlobalKey<FormState>();
   String _product = "";
   String _description = "";
-  int _productPrice = 0;
+  int _price = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +98,7 @@ class _ProductEntryFormPageState extends State<ProductEntryFormPage> {
                   ),
                   onChanged: (String? value) {
                     setState(() {
-                      _productPrice = int.tryParse(value!) ?? 0;
+                      _price = int.tryParse(value!) ?? 0;
                     });
                   },
                   validator: (String? value) {
@@ -129,7 +129,7 @@ class _ProductEntryFormPageState extends State<ProductEntryFormPage> {
                           "http://127.0.0.1:8000/create-flutter/",
                           jsonEncode(<String, String>{
                             'product': _product,
-                            'product_price': _productPrice.toString(),
+                            'product_price': _price.toString(),
                             'description': _description,
                           }),
                         );

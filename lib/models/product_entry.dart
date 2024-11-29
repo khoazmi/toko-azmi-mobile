@@ -30,27 +30,27 @@ class ProductEntry {
 
 class Fields {
     int user;
-    String nameProduct;
+    String product;
     int price;
     String description;
 
     Fields({
         required this.user,
-        required this.nameProduct,
+        required this.product,
         required this.price,
         required this.description,
     });
 
     factory Fields.fromJson(Map<String, dynamic> json) => Fields(
         user: json["user"],
-        nameProduct: json["name_product"],
+        product: json["name_product"],
         price: json["price"],
         description: json["description"],
     );
 
     Map<String, dynamic> toJson() => {
         "user": user,
-        "name_product": nameProduct,
+        "name_product": product,
         "price": price,
         "description": description,
     };
