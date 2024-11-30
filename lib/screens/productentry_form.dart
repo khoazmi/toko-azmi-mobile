@@ -127,9 +127,9 @@ class _ProductEntryFormPageState extends State<ProductEntryFormPage> {
                         // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
                         final response = await request.postJson(
                           "http://127.0.0.1:8000/create-flutter/",
-                          jsonEncode(<String, String>{
+                          jsonEncode(<String, dynamic>{
                             'product': _product,
-                            'product_price': _price.toString(),
+                            'price': _price,
                             'description': _description,
                           }),
                         );
